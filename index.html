@@ -1,15 +1,600 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TRIO ESPORT STUDIO — Free Fire Tournaments</title><meta name="description" content="TRIO ESPORT STUDIO Free Fire tournaments"><link rel="icon" type="image/png" href="assets/logo.png"><link rel="stylesheet" href="style.css"></head><body><div class="bg"></div><header><img src="assets/logo.png" alt="TRIO ESPORT STUDIO"><div><b>TRIO ESPORT STUDIO</b><small>FREE FIRE TOURNAMENTS</small></div></header><main><div class="banner"><img src="assets/banner.png" alt="Tournament Banner"></div><section class="hero"><img src="assets/hero.png" alt=""><div><span class="live"><i></i> LIVE TOURNAMENTS</span><h1>FREE FIRE <em>TOURNAMENTS</em></h1><p>Choose your game code • Check entry • Play • Win</p></div></section><section><div class="title"><div><small>TOURNAMENT MENU</small><h2>FREE FIRE <span>GAME CARDS</span></h2></div></div><div id="cards" class="grid"></div></section><section><div class="title"><div><small>CLASH SQUAD</small><h2>FREE FIRE <span>CS CARDS</span></h2></div></div><div id="cs" class="grid"></div></section><div class="banner"><img src="assets/banner.png" alt="Tournament Banner"></div></main><footer><img src="assets/logo.png" alt="TRIO"><b>TRIO ESPORT STUDIO</b><span>FREE FIRE TOURNAMENTS • PLAY • COMPETE • WIN</span></footer><script>
-const br=[
-['FF10kill','₹10','Multiple','BR','Per Kill','10+/Solo','₹7 / Kill','blue'],
-['FF10Rank','₹10','2','BR','Rank','10+/Solo','#1 ₹50 &nbsp; #2 ₹20','orange'],
-['FF50kill','₹50','Multiple','BR','Per Kill','10+/Solo','₹35 / Kill','blue'],
-['FF50Rank','₹50','2','BR','Rank','10+/Solo','#1 ₹200 &nbsp; #2 ₹150','orange'],
-['FF50Rank4','₹50','4','BR','Rank','10+/Solo','#1 ₹100 &nbsp; #2 ₹100 &nbsp; #3 ₹100 &nbsp; #4 ₹50','orange'],
-['FF100kill','₹100','Multiple','BR','Per Kill','10+/Solo','₹70 / Kill','blue'],
-['FF100Rank','₹100','2','BR','Rank','10+/Solo','#1 ₹500 &nbsp; #2 ₹200','orange'],
-['FF100Rank4','₹100','4','BR','Rank','10+/Solo','#1 ₹200 &nbsp; #2 ₹200 &nbsp; #3 ₹200 &nbsp; #4 ₹100','orange']
-];
-const cs=[['FF40CS','₹40','One Squad','CS','Game Winning','2/Squad','₹60'],['FF100CS','₹100','One Squad','CS','Game Winning','2/Squad','₹180'],['FF200CS','₹200','One Squad','CS','Game Winning','2/Squad','₹350'],['FF400CS','₹400','One Squad','CS','Game Winning','2/Squad','₹700']];
-function card(x,isCS=false){let[c,e,w,g,t,p,r,theme]=x;return `<article class="card ${isCS?'cs':' '+theme}"><div class="head"><div><strong>FREE FIRE</strong><label>Game Code - ${c}</label></div><span class="ico">${isCS?'⚔':'🎮'}</span></div><div class="stats"><div><small>ENTRY FEE</small><b>${e}</b></div><div><small>WINNERS</small><b>${w}</b></div><div><small>GAME</small><b>${g}</b></div><div><small>WINNING TYPE</small><b>${t}</b></div><div><small>PLAYERS</small><b>${p}</b></div><div class="status"><small>STATUS</small><b><i></i> Live</b></div></div><div class="reward"><span>🎁 &nbsp;REWARD</span><strong>${r}</strong></div></article>`}
-document.querySelector('#cards').innerHTML=br.map(x=>card(x)).join('');document.querySelector('#cs').innerHTML=cs.map(x=>card(x,true)).join('');
-</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TRIO ESPORT STUDIO — Free Fire Tournaments</title>
+
+  <meta
+    name="description"
+    content="TRIO ESPORT STUDIO Free Fire tournaments"
+  >
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="bg"></div>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <img
+      src="assets/logo.png"
+      alt="TRIO ESPORT STUDIO"
+    >
+
+    <div>
+      <b>TRIO ESPORT STUDIO</b>
+      <small>FREE FIRE TOURNAMENTS</small>
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         TOP BANNER
+    ========================== -->
+
+    <div class="banner">
+
+      <img
+        src="assets/banner.png"
+        alt="Tournament Banner"
+      >
+
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <img
+        src="assets/hero.png"
+        alt=""
+      >
+
+      <div>
+
+        <span class="live">
+          <i></i>
+          LIVE TOURNAMENTS
+        </span>
+
+        <h1>
+          FREE FIRE
+          <em>TOURNAMENTS</em>
+        </h1>
+
+        <p>
+          Choose your game code • Check entry • Play • Win
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FREE FIRE GAME CARDS
+    ========================== -->
+
+    <section>
+
+      <div class="title">
+
+        <div>
+
+          <small>TOURNAMENT MENU</small>
+
+          <h2>
+            FREE FIRE
+            <span>GAME CARDS</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div id="cards" class="grid"></div>
+
+    </section>
+
+
+    <!-- =========================
+         CLASH SQUAD
+    ========================== -->
+
+    <section>
+
+      <div class="title">
+
+        <div>
+
+          <small>CLASH SQUAD</small>
+
+          <h2>
+            FREE FIRE
+            <span>CS CARDS</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div id="cs" class="grid"></div>
+
+    </section>
+
+
+    <!-- =========================
+         BOTTOM BANNER
+    ========================== -->
+
+    <div class="banner">
+
+      <img
+        src="assets/banner.png"
+        alt="Tournament Banner"
+      >
+
+    </div>
+
+
+    <!-- =================================================
+         LOCATION SECTION
+         Floating ↓ button yahin lekar jayega
+    ================================================== -->
+
+    <section
+      id="location-section"
+      class="location-section"
+    >
+
+      <div class="title">
+
+        <div>
+
+          <small>TRIO ESPORT STUDIO</small>
+
+          <h2>
+            TOURNAMENT
+            <span>LOCATION</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="location-box">
+
+
+        <!-- EDIT VENUE HERE -->
+
+        <div class="location-info">
+
+          <small>VENUE</small>
+
+          <strong>
+            Bodhegaon, Bajar Tal (Market Yard)
+          </strong>
+
+
+          <!-- EDIT CITY HERE -->
+
+          <span>
+            Bodhegaon
+          </span>
+
+        </div>
+
+
+        <!-- =========================
+             DATE + TIME
+        ========================== -->
+
+        <div class="location-details">
+
+
+          <!-- EDIT DATE HERE -->
+
+          <div>
+
+            <small>DATE</small>
+
+            <b>
+              28 October – 30 October
+            </b>
+
+          </div>
+
+
+          <!-- EDIT TIME HERE -->
+
+          <div>
+
+            <small>TIME</small>
+
+            <b>
+              4:00 PM – 11:00 PM
+            </b>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             LOCATION PAGE BUTTON
+
+             location.html open hoga
+        ========================== -->
+
+        <div class="location-buttons">
+
+          <a
+            href="location.html"
+            class="location-main-btn"
+          >
+            📍 VIEW TOURNAMENT LOCATION
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <img
+      src="assets/logo.png"
+      alt="TRIO"
+    >
+
+    <b>
+      TRIO ESPORT STUDIO
+    </b>
+
+    <span>
+      FREE FIRE TOURNAMENTS • PLAY • COMPETE • WIN
+    </span>
+
+  </footer>
+
+
+  <!-- =================================================
+       FLOATING ↓ BUTTON
+
+       Click karne par location section par jayega.
+  ================================================== -->
+
+  <button
+    class="go-bottom"
+    onclick="goToLocation()"
+    aria-label="Go to location"
+  >
+    ↓
+  </button>
+
+
+  <!-- =================================================
+       TOURNAMENT DATA
+
+       Future me pricing / reward change karna ho
+       to sirf yahan change karna.
+  ================================================== -->
+
+  <script>
+
+    /* =========================
+       FREE FIRE BR DATA
+    ========================== */
+
+    const br = [
+
+      [
+        'FF10kill',
+        '₹10',
+        'Multiple',
+        'BR',
+        'Per Kill',
+        '10+/Solo',
+        '₹7 / Kill',
+        'blue'
+      ],
+
+      [
+        'FF10Rank',
+        '₹10',
+        '2',
+        'BR',
+        'Rank',
+        '10+/Solo',
+        '#1 ₹50 &nbsp; #2 ₹20',
+        'orange'
+      ],
+
+      [
+        'FF50kill',
+        '₹50',
+        'Multiple',
+        'BR',
+        'Per Kill',
+        '10+/Solo',
+        '₹35 / Kill',
+        'blue'
+      ],
+
+      [
+        'FF50Rank',
+        '₹50',
+        '2',
+        'BR',
+        'Rank',
+        '10+/Solo',
+        '#1 ₹200 &nbsp; #2 ₹150',
+        'orange'
+      ],
+
+      [
+        'FF50Rank4',
+        '₹50',
+        '4',
+        'BR',
+        'Rank',
+        '10+/Solo',
+        '#1 ₹100 &nbsp; #2 ₹100 &nbsp; #3 ₹100 &nbsp; #4 ₹50',
+        'orange'
+      ],
+
+      [
+        'FF100kill',
+        '₹100',
+        'Multiple',
+        'BR',
+        'Per Kill',
+        '10+/Solo',
+        '₹70 / Kill',
+        'blue'
+      ],
+
+      [
+        'FF100Rank',
+        '₹100',
+        '2',
+        'BR',
+        'Rank',
+        '10+/Solo',
+        '#1 ₹500 &nbsp; #2 ₹200',
+        'orange'
+      ],
+
+      [
+        'FF100Rank4',
+        '₹100',
+        '4',
+        'BR',
+        'Rank',
+        '10+/Solo',
+        '#1 ₹200 &nbsp; #2 ₹200 &nbsp; #3 ₹200 &nbsp; #4 ₹100',
+        'orange'
+      ]
+
+    ];
+
+
+    /* =========================
+       CLASH SQUAD DATA
+    ========================== */
+
+    const cs = [
+
+      [
+        'FF40CS',
+        '₹40',
+        'One Squad',
+        'CS',
+        'Game Winning',
+        '2/Squad',
+        '₹60'
+      ],
+
+      [
+        'FF100CS',
+        '₹100',
+        'One Squad',
+        'CS',
+        'Game Winning',
+        '2/Squad',
+        '₹180'
+      ],
+
+      [
+        'FF200CS',
+        '₹200',
+        'One Squad',
+        'CS',
+        'Game Winning',
+        '2/Squad',
+        '₹350'
+      ],
+
+      [
+        'FF400CS',
+        '₹400',
+        'One Squad',
+        'CS',
+        'Game Winning',
+        '2/Squad',
+        '₹700'
+      ]
+
+    ];
+
+
+    /* =========================
+       CARD FUNCTION
+
+       Isko normally change mat karna.
+    ========================== */
+
+    function card(x, isCS = false) {
+
+      let [
+        code,
+        entry,
+        winners,
+        game,
+        winningType,
+        players,
+        reward,
+        theme
+      ] = x;
+
+      return `
+        <article class="card ${isCS ? 'cs' : ' ' + theme}">
+
+          <div class="head">
+
+            <div>
+
+              <strong>FREE FIRE</strong>
+
+              <label>
+                Game Code - ${code}
+              </label>
+
+            </div>
+
+            <span class="ico">
+              ${isCS ? '⚔' : '🎮'}
+            </span>
+
+          </div>
+
+
+          <div class="stats">
+
+            <div>
+              <small>ENTRY FEE</small>
+              <b>${entry}</b>
+            </div>
+
+            <div>
+              <small>WINNERS</small>
+              <b>${winners}</b>
+            </div>
+
+            <div>
+              <small>GAME</small>
+              <b>${game}</b>
+            </div>
+
+            <div>
+              <small>WINNING TYPE</small>
+              <b>${winningType}</b>
+            </div>
+
+            <div>
+              <small>PLAYERS</small>
+              <b>${players}</b>
+            </div>
+
+            <div class="status">
+              <small>STATUS</small>
+
+              <b>
+                <i></i>
+                Live
+              </b>
+
+            </div>
+
+          </div>
+
+
+          <div class="reward">
+
+            <span>
+              🎁 &nbsp;REWARD
+            </span>
+
+            <strong>
+              ${reward}
+            </strong>
+
+          </div>
+
+        </article>
+      `;
+
+    }
+
+
+    /* =========================
+       SHOW BR CARDS
+    ========================== */
+
+    document
+      .querySelector('#cards')
+      .innerHTML = br
+      .map(x => card(x))
+      .join('');
+
+
+    /* =========================
+       SHOW CS CARDS
+    ========================== */
+
+    document
+      .querySelector('#cs')
+      .innerHTML = cs
+      .map(x => card(x, true))
+      .join('');
+
+
+    /* =========================
+       FLOATING BUTTON FUNCTION
+    ========================== */
+
+    function goToLocation() {
+
+      document
+        .getElementById('location-section')
+        .scrollIntoView({
+          behavior: 'smooth'
+        });
+
+    }
+
+  </script>
+
+</body>
+
+</html>

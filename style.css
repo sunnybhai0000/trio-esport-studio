@@ -1,1 +1,1152 @@
-*{box-sizing:border-box} :root{--bg:#04070b;--blue:#09a9ff;--orange:#ff681c;--gold:#ffd21a;--green:#18ff63}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}.bg{position:fixed;inset:0;z-index:-2;background:linear-gradient(rgba(2,5,9,.78),rgba(2,5,9,.9)),url('assets/bg.png') center/cover}.bg:after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(0,130,255,.12),transparent 35%),radial-gradient(circle at 80% 30%,rgba(255,70,0,.1),transparent 35%)}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:14px;padding:10px 5%;background:rgba(2,5,9,.9);border-bottom:1px solid #14506c;backdrop-filter:blur(12px)}header img{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 0 12px #087bb8)}header b{display:block;letter-spacing:2px}header small{display:block;color:#70caff;letter-spacing:3px;font-size:9px;margin-top:4px}main{width:min(1450px,94%);margin:auto}.banner{margin:24px 0;border:1px solid #294253;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px #0009}.banner img{display:block;width:100%;height:auto}.hero{position:relative;height:250px;border:1px solid #135a7c;border-radius:18px;overflow:hidden;display:grid;place-items:center;text-align:center;margin:28px 0 42px;background:#07101a}.hero>img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:.3}.hero>div{position:relative}.live{font-size:11px;font-weight:900;letter-spacing:3px;color:#8edcff}.live i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);margin-right:7px}h1{font-size:clamp(40px,6vw,76px);line-height:.9;margin:12px 0;font-weight:1000;text-shadow:0 5px 20px #000}h1 em{display:block;color:#fff;font-style:normal;text-shadow:0 0 18px #087dff} .hero p{color:#a9bfd0;font-weight:700}.title{margin:38px 0 18px}.title small{color:#7d9ab0;font-size:10px;letter-spacing:4px;font-weight:900}.title h2{margin:5px 0;font-size:clamp(26px,3vw,40px)}.title h2 span{color:var(--blue)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.card{position:relative;padding:17px;border-radius:20px;background:linear-gradient(145deg,#071522f5,#03070cf8);overflow:hidden;box-shadow:0 18px 45px #0009}.card:before{content:'';position:absolute;inset:0;border-radius:20px;padding:2px;background:linear-gradient(135deg,var(--blue),#12334a);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}.card.orange:before{background:linear-gradient(135deg,var(--orange),#521a0b)}.card.cs:before{background:linear-gradient(135deg,#ffbd00,#ff4d00,#581705)}.head{min-height:100px;border:1px solid #116c9b;border-radius:14px;padding:16px 19px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(100deg,#07508055,#02070cf2)}.orange .head{border-color:#913c1c;background:linear-gradient(100deg,#76260766,#0b0604f2)}.cs .head{border-color:#a76a13;background:linear-gradient(100deg,#7c420066,#0c0602f2)}.head strong{display:block;font-size:27px;font-weight:1000}.head label{display:inline-block;margin-top:8px;color:#ffbd00;font-size:14px;font-weight:900}.ico{font-size:38px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.stats>div{min-height:101px;padding:13px 8px;border:1px solid #096aa0;border-radius:13px;background:#030b14ee;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.orange .stats>div{border-color:#70331e}.cs .stats>div{border-color:#8c5c15}.stats small{font-size:9px;color:#76cfff;font-weight:900;letter-spacing:1px}.orange .stats small,.cs .stats small{color:#ffb06a}.stats b{font-size:19px;color:var(--gold);margin-top:9px;line-height:1.15}.status b{color:var(--green)}.status i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);margin-right:5px}.reward{min-height:74px;margin-top:14px;border-radius:13px;border:1px solid #0877b0;padding:13px 17px;display:flex;align-items:center;justify-content:space-between;gap:15px;background:linear-gradient(90deg,#034b8055,#02070df0)}.orange .reward,.cs .reward{border-color:#8d3b1e;background:linear-gradient(90deg,#7c2c0a55,#0b0604f0)}.reward span{font-size:12px;font-weight:1000}.reward strong{font-size:20px;color:var(--gold);text-align:right}footer{margin-top:55px;padding:35px 20px 48px;text-align:center;background:#000b;border-top:1px solid #164258}footer img{width:72px;height:72px;object-fit:contain}footer b{display:block;letter-spacing:3px;margin-top:6px}footer span{display:block;margin-top:8px;color:#71899c;font-size:9px;letter-spacing:2px}@media(max-width:900px){.grid{grid-template-columns:1fr}}@media(max-width:600px){header{padding:8px 12px}header img{width:48px;height:48px}.hero{height:220px}.stats{gap:7px}.stats>div{min-height:88px}.stats small{font-size:7px}.stats b{font-size:15px}.head strong{font-size:22px}.head label{font-size:11px}.reward{flex-direction:column;align-items:flex-start}.reward strong{text-align:left;font-size:18px}}
+/* =========================================================
+   TRIO ESPORT STUDIO
+   MAIN WEBSITE CSS
+========================================================= */
+
+
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN COLORS
+   Future me overall colors change karne ho
+   to mostly yahin se change karna.
+========================================================= */
+
+:root {
+    --bg: #04070b;
+
+    --blue: #09a9ff;
+
+    --orange: #ff681c;
+
+    --gold: #ffd21a;
+
+    --green: #18ff63;
+}
+
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    margin: 0;
+
+    background: var(--bg);
+
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   FIXED BACKGROUND
+   Background image:
+   assets/bg.png
+========================================================= */
+
+.bg {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(rgba(2, 5, 9, 0.78),
+            rgba(2, 5, 9, 0.90)),
+        url("assets/bg.png") center / cover;
+}
+
+
+/* Background blue/orange glow */
+
+.bg::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+            rgba(0, 130, 255, 0.12),
+            transparent 35%),
+        radial-gradient(circle at 80% 30%,
+            rgba(255, 70, 0, 0.10),
+            transparent 35%);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px 5%;
+
+    background: rgba(2, 5, 9, 0.90);
+
+    border-bottom: 1px solid #14506c;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* Header logo */
+
+header img {
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 12px #087bb8);
+}
+
+
+/* Website name */
+
+header b {
+    display: block;
+
+    letter-spacing: 2px;
+}
+
+
+/* Header subtitle */
+
+header small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #70caff;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+main {
+    width: min(1450px, 94%);
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+.banner {
+    margin: 24px 0;
+
+    border: 1px solid #294253;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 50px #0009;
+}
+
+
+/* Banner image */
+
+.banner img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    position: relative;
+
+    height: 250px;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    margin: 28px 0 42px;
+
+    background: #07101a;
+
+    border: 1px solid #135a7c;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+
+/* Hero background image */
+
+.hero>img {
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.3;
+}
+
+
+/* Hero text stays above image */
+
+.hero>div {
+    position: relative;
+}
+
+
+/* =========================================================
+   LIVE LABEL
+========================================================= */
+
+.live {
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: #8edcff;
+}
+
+
+/* Green live dot */
+
+.live i {
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 12px var(--green);
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+h1 {
+    margin: 12px 0;
+
+    font-size: clamp(40px,
+            6vw,
+            76px);
+
+    line-height: 0.9;
+
+    font-weight: 1000;
+
+    text-shadow:
+        0 5px 20px #000;
+}
+
+
+/* Highlighted word */
+
+h1 em {
+    display: block;
+
+    color: #fff;
+
+    font-style: normal;
+
+    text-shadow:
+        0 0 18px #087dff;
+}
+
+
+/* Hero description */
+
+.hero p {
+    color: #a9bfd0;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.title {
+    margin: 38px 0 18px;
+}
+
+
+/* Small title */
+
+.title small {
+    color: #7d9ab0;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 900;
+}
+
+
+/* Main title */
+
+.title h2 {
+    margin: 5px 0;
+
+    font-size: clamp(26px,
+            3vw,
+            40px);
+}
+
+
+/* Blue highlighted text */
+
+.title h2 span {
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   TOURNAMENT CARD GRID
+========================================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,
+            minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   TOURNAMENT CARD
+========================================================= */
+
+.card {
+    position: relative;
+
+    padding: 17px;
+
+    background:
+        linear-gradient(145deg,
+            #071522f5,
+            #03070cf8);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 45px #0009;
+}
+
+
+/* Neon border */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 2px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg,
+            var(--blue),
+            #12334a);
+
+    /* Standard mask */
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    /* Chrome / Safari */
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+}
+
+
+/* Orange card border */
+
+.card.orange::before {
+    background:
+        linear-gradient(135deg,
+            var(--orange),
+            #521a0b);
+}
+
+
+/* Clash Squad border */
+
+.card.cs::before {
+    background:
+        linear-gradient(135deg,
+            #ffbd00,
+            #ff4d00,
+            #581705);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.head {
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 16px 19px;
+
+    background:
+        linear-gradient(100deg,
+            #07508055,
+            #02070cf2);
+
+    border: 1px solid #116c9b;
+
+    border-radius: 14px;
+}
+
+
+/* Orange card header */
+
+.orange .head {
+    border-color: #913c1c;
+
+    background:
+        linear-gradient(100deg,
+            #76260766,
+            #0b0604f2);
+}
+
+
+/* CS card header */
+
+.cs .head {
+    border-color: #a76a13;
+
+    background:
+        linear-gradient(100deg,
+            #7c420066,
+            #0c0602f2);
+}
+
+
+/* FREE FIRE text */
+
+.head strong {
+    display: block;
+
+    font-size: 27px;
+
+    font-weight: 1000;
+}
+
+
+/* Game code */
+
+.head label {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    color: #ffbd00;
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+
+/* Game icon */
+
+.ico {
+    font-size: 38px;
+}
+
+
+/* =========================================================
+   CARD STATS
+========================================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 14px;
+}
+
+
+/* Individual stat box */
+
+.stats>div {
+    min-height: 101px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 8px;
+
+    text-align: center;
+
+    background: #030b14ee;
+
+    border: 1px solid #096aa0;
+
+    border-radius: 13px;
+}
+
+
+/* Orange stats */
+
+.orange .stats>div {
+    border-color: #70331e;
+}
+
+
+/* CS stats */
+
+.cs .stats>div {
+    border-color: #8c5c15;
+}
+
+
+/* Stat title */
+
+.stats small {
+    color: #76cfff;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* Orange/CS stat title */
+
+.orange .stats small,
+.cs .stats small {
+    color: #ffb06a;
+}
+
+
+/* Stat value */
+
+.stats b {
+    margin-top: 9px;
+
+    color: var(--gold);
+
+    font-size: 19px;
+
+    line-height: 1.15;
+}
+
+
+/* LIVE status */
+
+.status b {
+    color: var(--green);
+}
+
+
+/* LIVE dot */
+
+.status i {
+    display: inline-block;
+
+    width: 9px;
+
+    height: 9px;
+
+    margin-right: 5px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 10px var(--green);
+}
+
+
+/* =========================================================
+   REWARD BOX
+========================================================= */
+
+.reward {
+    min-height: 74px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 14px;
+
+    padding: 13px 17px;
+
+    background:
+        linear-gradient(90deg,
+            #034b8055,
+            #02070df0);
+
+    border: 1px solid #0877b0;
+
+    border-radius: 13px;
+}
+
+
+/* Orange/CS reward */
+
+.orange .reward,
+.cs .reward {
+    border-color: #8d3b1e;
+
+    background:
+        linear-gradient(90deg,
+            #7c2c0a55,
+            #0b0604f0);
+}
+
+
+/* Reward title */
+
+.reward span {
+    font-size: 12px;
+
+    font-weight: 1000;
+}
+
+
+/* Reward amount */
+
+.reward strong {
+    color: var(--gold);
+
+    font-size: 20px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   LOCATION SECTION
+========================================================= */
+
+.location-section {
+    margin-top: 60px;
+
+    margin-bottom: 45px;
+}
+
+
+/* Location main box */
+
+.location-box {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 25px;
+
+    background:
+        rgba(5, 9, 16, 0.88);
+
+    border: 1px solid rgba(21, 156, 255, 0.35);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 18px 50px #0009,
+        0 0 30px rgba(21, 156, 255, 0.08);
+}
+
+
+/* =========================================================
+   LOCATION VENUE
+========================================================= */
+
+.location-info small,
+.location-details small {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #748196;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Venue name */
+
+.location-info strong {
+    display: block;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    line-height: 1.3;
+}
+
+
+/* City */
+
+.location-info span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--orange);
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   LOCATION DATE + TIME
+========================================================= */
+
+.location-details {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* Date/time box */
+
+.location-details>div {
+    padding: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 9px;
+}
+
+
+/* Date/time value */
+
+.location-details b {
+    color: white;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   LOCATION BUTTON
+========================================================= */
+
+.location-buttons {
+    margin-top: 20px;
+}
+
+
+/* Main location button */
+
+.location-main-btn {
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background: #087ee8;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+
+/* Location button hover */
+
+.location-main-btn:hover {
+    background: #159cff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(21, 156, 255, 0.45);
+}
+
+
+/* =========================================================
+   FLOATING GO-TO-LOCATION BUTTON
+========================================================= */
+
+.go-bottom {
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 999;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    color: white;
+
+    background:
+        rgba(5, 9, 16, 0.94);
+
+    border:
+        1px solid rgba(21, 156, 255, 0.60);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 18px rgba(21, 156, 255, 0.25);
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* Floating button hover */
+
+.go-bottom:hover {
+    background: #087ee8;
+
+    transform: translateY(3px);
+
+    box-shadow:
+        0 0 25px rgba(21, 156, 255, 0.55);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    margin-top: 55px;
+
+    padding: 35px 20px 48px;
+
+    text-align: center;
+
+    background: #000b;
+
+    border-top: 1px solid #164258;
+}
+
+
+/* Footer logo */
+
+footer img {
+    width: 72px;
+
+    height: 72px;
+
+    object-fit: contain;
+}
+
+
+/* Footer name */
+
+footer b {
+    display: block;
+
+    margin-top: 6px;
+
+    letter-spacing: 3px;
+}
+
+
+/* Footer subtitle */
+
+footer span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #71899c;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* One card per row on smaller screens */
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    /* Header */
+
+    header {
+        padding: 8px 12px;
+    }
+
+
+    header img {
+        width: 48px;
+
+        height: 48px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        height: 220px;
+    }
+
+
+    /* Card stats */
+
+    .stats {
+        gap: 7px;
+    }
+
+
+    .stats>div {
+        min-height: 88px;
+    }
+
+
+    .stats small {
+        font-size: 7px;
+    }
+
+
+    .stats b {
+        font-size: 15px;
+    }
+
+
+    /* Card heading */
+
+    .head strong {
+        font-size: 22px;
+    }
+
+
+    .head label {
+        font-size: 11px;
+    }
+
+
+    /* Reward */
+
+    .reward {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .reward strong {
+        font-size: 18px;
+
+        text-align: left;
+    }
+
+
+    /* =================================================
+     LOCATION MOBILE
+  ================================================= */
+
+    .location-box {
+        padding: 18px;
+    }
+
+
+    .location-info strong {
+        font-size: 17px;
+    }
+
+
+    .location-details {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =================================================
+     FLOATING BUTTON MOBILE
+  ================================================= */
+
+    .go-bottom {
+        right: 14px;
+
+        bottom: 15px;
+
+        width: 44px;
+
+        height: 44px;
+
+        font-size: 21px;
+    }
+
+}
